@@ -4,23 +4,28 @@ namespace SimpleWebScraper
 {
     class Person
     {
-        string Id;
-        string PassportData;
-        string DriversLicenseNumber;
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
 
-        public Person(string id, string passportData, string driverLicenseNumber)
+        public Person(string FirstName, string LastName)
         {
-            Id = id;
-            PassportData = passportData;
-            DriversLicenseNumber = driverLicenseNumber;
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+        }
+        
+        public void Walk()
+        {
+            Console.WriteLine("I am walking. ");
         }
 
-        /* This property abstracts over the fields above, which are internal. */
-        public bool HasProperDocuments { 
-            get 
-            {
-                return Id.Length > 0 && PassportData.Length > 0 && DriversLicenseNumber.Length > 0;
-            } 
+        public void Eat()
+        {
+            Console.WriteLine("I am eating. ");
+        }
+
+        public void Sleep()
+        {
+            Console.WriteLine("I am sleeping. ");
         }
     }
 }
