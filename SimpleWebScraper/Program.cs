@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace SimpleWebScraper
 {
@@ -6,16 +7,11 @@ namespace SimpleWebScraper
     {
         static void Main(string[] args)
         {
-            SimpleCalculator simpleCalculator = new SimpleCalculator();
+            MatchCollection matches = Regex.Matches("blah blah This is my cat blah blah", "This is my [a-z]at");
 
-            var scenario1 = true;
-            if (scenario1)
+            foreach (var match in matches)
             {
-                Console.WriteLine("Answer is {0}", simpleCalculator.Add(1, 2));
-            }
-            else
-            {
-                Console.WriteLine(simpleCalculator.Add(1, 2));
+                Console.WriteLine(match);
             }
         }
     }
