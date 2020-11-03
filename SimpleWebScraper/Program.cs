@@ -6,7 +6,16 @@ namespace SimpleWebScraper
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Person person = new Person();
+            person.FirstName = "Bad";
+            person.LastName = "Man";
+
+            Console.WriteLine(person.FirstName);
+            Console.WriteLine(person.LastName);
+            Console.WriteLine(person.HasProperDocuments);
+
+            person.FirstName = "";
+            Console.WriteLine(person.FirstName);
         }
     }
-}
+} 
