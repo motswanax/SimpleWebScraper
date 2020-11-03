@@ -4,12 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Person person = new Person("Bad", "Man");
-            person.Sleep();
-
-            SuperPerson person1 = new SuperPerson("Super", "Man");
-            person1.Sleep();
-            person1.Fly();
+            Person person = new PersonBuilder().Build();
+            Person person1 = new PersonBuilder().WithAge(35).Build();
+            Person person2 = new PersonBuilder().WithAge(39).Build();
         }
     }
-} 
+}

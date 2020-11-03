@@ -4,7 +4,8 @@ namespace SimpleWebScraper
 {
     class SuperPerson : Person
     {
-        public SuperPerson(string FirstName, string LastName) : base(FirstName, LastName)
+        public SuperPerson(string FirstName, string LastName, int Age, int EyeColor, int HairColor) : 
+            base(FirstName, LastName, Age, EyeColor, HairColor)
         {
         }
 
